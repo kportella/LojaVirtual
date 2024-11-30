@@ -7,6 +7,7 @@ public class LojaVirtual {
     public static bool UsuarioAutenticado = false;
     
     [Notification]
+    [Exception]
     [Auth]
     [Auditoria]
     public void CadastrarPedido(Pedido pedido) {
@@ -15,6 +16,7 @@ public class LojaVirtual {
     
     [Auth]
     [Auditoria]
+    [Exception]
     public List<Pedido> ListarPedidos() {
         return Pedidos;
     }
@@ -22,6 +24,7 @@ public class LojaVirtual {
     [Notification]
     [Auth]
     [Auditoria]
+    [Exception]
     public void AlterarPedidos(int id, Pedido novoPedido) {
         foreach (var pedido in Pedidos.ToList().Where(pedido => pedido.Id == id))
         {
@@ -30,6 +33,9 @@ public class LojaVirtual {
         }
     }
 
+    [Notification]
+    [Auditoria]
+    [Exception]
     public void Login(string email, string senha)
     {
         if (email == "admin" && senha == "admin")
