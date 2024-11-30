@@ -7,17 +7,20 @@ public class LojaVirtual {
     
     [Notification]
     [Auth]
+    [Auditoria]
     public void CadastrarPedido(Pedido pedido) {
         Pedidos.Add(pedido);
     }
     
     [Auth]
+    [Auditoria]
     public List<Pedido> ListarPedidos() {
         return Pedidos;
     }
     
     [Notification]
     [Auth]
+    [Auditoria]
     public void AlterarPedidos(int id, Pedido novoPedido) {
         foreach (var pedido in Pedidos.ToList().Where(pedido => pedido.Id == id))
         {
