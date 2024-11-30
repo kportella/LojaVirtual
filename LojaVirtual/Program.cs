@@ -4,4 +4,5 @@ Console.WriteLine("Hello, World!");
 
 var loja = new LojaVirtual.LojaVirtual();
 
+//teste
 loja.ListarPedidos();
