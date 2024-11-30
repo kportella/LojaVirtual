@@ -6,13 +6,7 @@ public class AuthAttribute : OverrideMethodAspect
 {
     public override dynamic? OverrideMethod()
     {
-        if (userIsAuthenticated()) return meta.Proceed();
+        if (LojaVirtual.UsuarioAutenticado) return meta.Proceed();
         throw new UnauthorizedAccessException("Usuário não autenticado.");
     }
-
-    private bool userIsAuthenticated()
-    {
-        return true;
-    }
-    
 }

@@ -4,6 +4,7 @@ namespace LojaVirtual;
 
 public class LojaVirtual {
     private List<Pedido> Pedidos = [];
+    public static bool UsuarioAutenticado = false;
     
     [Notification]
     [Auth]
@@ -27,5 +28,11 @@ public class LojaVirtual {
             Pedidos.Remove(pedido);
             Pedidos.Add(novoPedido);
         }
+    }
+
+    public void Login(string email, string senha)
+    {
+        if (email == "admin" && senha == "admin")
+            UsuarioAutenticado = true;
     }
 }
