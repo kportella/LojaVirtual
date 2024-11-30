@@ -1,5 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+// Integrantes:
+// Diego Carvalho
+// Guilherme Nardini
+// Jéfferson Tales Canalli
+// Kaue Portella
+// Suriel Jacobsen
+
 using LojaVirtual;
 using LojaVirtual.Aspects;
 
