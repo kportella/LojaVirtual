@@ -35,4 +35,13 @@ public class LojaVirtual {
         if (email == "admin" && senha == "admin")
             UsuarioAutenticado = true;
     }
+    
+    [Notification]
+    [Exception]
+    [Auth]
+    [Auditoria]
+    public void CadastrarPedidoComExcecao(Pedido pedido)
+    {
+        throw new ArgumentOutOfRangeException(nameof(pedido));
+    }
 }
