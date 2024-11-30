@@ -1,9 +1,2 @@
 namespace LojaVirtual;
-
-public class Pedido {
-    private int Id;
-    private string Cliente;
-    private List<string> Produtos;
-    private double ValorTotal;
-    // Construtores, getters e setters...
-}
+public record Pedido(int Id, string Cliente, List<string> Produtos, double ValorTotal);
